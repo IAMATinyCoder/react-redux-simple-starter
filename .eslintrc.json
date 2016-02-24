@@ -1,0 +1,47 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": false
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            2,
+            "tab"
+        ],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "quotes": [
+            2,
+            "double"
+        ],
+        "semi": [
+            2,
+            "always"
+        ]
+    },
+    "SublimeLinter": {
+    "linters": {
+      "eslint": {
+        "@disable": false,
+        "args": [
+          "@",
+          "--config ${project}/.eslintrc"
+        ]
+      }
+    }
+  }
+}
