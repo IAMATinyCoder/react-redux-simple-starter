@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 // Create a class based component
-// Class based components are used when 
-// a component needs to be aware of state
+// Class based components are used when a component needs to be aware of state
 
 class SearchBar extends Component {
 	constructor(props) {
@@ -13,12 +12,17 @@ class SearchBar extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="search-bar">
 				<input 
-				value ={this.state.term}
-				  />
+					value ={this.state.term}
+				  	onChange={event => this.onInputChange(event.target.value)} />
 			</div>
 		); 
+	}
+
+	onInputChange(term) {
+		this.setState({term});
+		this.props.onSearchTermChange(term);
 	}
 }
 
